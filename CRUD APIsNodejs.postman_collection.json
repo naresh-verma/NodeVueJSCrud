@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "bd3a496a-da9f-4686-85be-6d00901b1878",
+		"name": "CRUD APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUzODAwMDA0LCJleHAiOjE2NTM4MDM2MDR9.sIDgn-4OTpIca1noigF_Q9x0K3DrgXnY2JDx7azJxZGFsuDlKfY0XCUs209sOoY2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin4@example.com\",\n    \"password\":\"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crud/admin/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crud",
+						"admin",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJlbWFpbCI6ImFkbWluMUBtYWlsaW5hdG9yLmNvbSIsInJvbGUiOjEsImlhdCI6MTY1Mzc0Njk2NSwiZXhwIjoxNjU0MTA2OTY1fQ.JuK2sEOMJGsmTvWu7n3H_TUJbxUR3JAGFLsSQLxA4C4lG1CM3MTtT5pvP1QodMwk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@example.com\",\n    \"password\":\"Admin@123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/crud/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crud",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add NEw Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUzNzc3ODI3LCJleHAiOjE2NTQxMzc4Mjd9.9F9z3LnF0rxVf_1JzP2KpU7YUwjkhvqccerSZXIz2JUQbqtR9ZJ2wiyon-VyCC3f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJlbWFpbCI6ImFkbWluMUBtYWlsaW5hdG9yLmNvbSIsInJvbGUiOjEsImlhdCI6MTY1Mzc0Njk2NSwiZXhwIjoxNjU0MTA2OTY1fQ.JuK2sEOMJGsmTvWu7n3H_TUJbxUR3JAGFLsSQLxA4C4lG1CM3MTtT5pvP1QodMwk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin3@example.com\",\n    \"password\":\"Admin@123\",\n    \"phone\":\"+919027052045\",\n    \"name\":\"Naresh Verma\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crud/admin/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crud",
+						"admin",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUzODA4MDc1LCJleHAiOjE2NTM4MTE2NzV9.EdLpYvWm7noAjW4XdrwzDh5hE4eC1zjGu-j8ZKnzgZdVEsC4IWuxFw107t7nQBpC",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJlbWFpbCI6ImFkbWluMUBtYWlsaW5hdG9yLmNvbSIsInJvbGUiOjEsImlhdCI6MTY1Mzc0Njk2NSwiZXhwIjoxNjU0MTA2OTY1fQ.JuK2sEOMJGsmTvWu7n3H_TUJbxUR3JAGFLsSQLxA4C4lG1CM3MTtT5pvP1QodMwk",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crud/admin/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crud",
+						"admin",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "searchValue",
+							"value": "N",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUzNzUxNjM4LCJleHAiOjE2NTQxMTE2Mzh9.B2bKHuAvbMHvMsr-XLZjqrdPXrdWlzBJ3LtXrQrdFBcFhSN9_kwFc3PpmIZe4b_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Nnnnnn\",\n    \"employee_id\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crud/admin/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crud",
+						"admin",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUzNzUxNjM4LCJleHAiOjE2NTQxMTE2Mzh9.B2bKHuAvbMHvMsr-XLZjqrdPXrdWlzBJ3LtXrQrdFBcFhSN9_kwFc3PpmIZe4b_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJlbWFpbCI6ImFkbWluMUBtYWlsaW5hdG9yLmNvbSIsInJvbGUiOjEsImlhdCI6MTY1Mzc0Njk2NSwiZXhwIjoxNjU0MTA2OTY1fQ.JuK2sEOMJGsmTvWu7n3H_TUJbxUR3JAGFLsSQLxA4C4lG1CM3MTtT5pvP1QodMwk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/crud/admin/employee?employee_id=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crud",
+						"admin",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "employee_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUzODAwMDA0LCJleHAiOjE2NTM4MDM2MDR9.sIDgn-4OTpIca1noigF_Q9x0K3DrgXnY2JDx7azJxZGFsuDlKfY0XCUs209sOoY2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employee_id\":7\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crud/admin/employee/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crud",
+						"admin",
+						"employee",
+						"get"
+					],
+					"query": [
+						{
+							"key": "employee_id",
+							"value": "7",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6MSwiaWF0IjoxNjUzODAwMDA0LCJleHAiOjE2NTM4MDM2MDR9.sIDgn-4OTpIca1noigF_Q9x0K3DrgXnY2JDx7azJxZGFsuDlKfY0XCUs209sOoY2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"nare\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/crud/admin/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crud",
+						"admin",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:3000/crud",
+			"type": "string"
+		}
+	]
+}

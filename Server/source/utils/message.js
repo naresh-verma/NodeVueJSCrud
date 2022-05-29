@@ -1,0 +1,21 @@
+module.exports = {
+        unAuthorizedAccess: "Unauthorized access",
+        intrnlServorError: "Internal servor error",
+        conflictError: "Conflict Error",
+        recordNotFound: "Record not found",
+        bad_request: 'Bad Request Error',
+        record_already_exist: 'Record already exist error',
+        emailAlreadyExit: "User with this email already exists",
+        registeredSuccessfully: "Registered Successfully",
+        errorOccuredIn: "Error occured in {field}",
+        accountNotFound: "Account with this email does not exist. Please try to register",
+        pwdIncorrect: "Password is incorrect",
+        loginSuccessfull: "Login is successfull",
+        unableToPerformOperation: "Unable to perform operation",
+        employeesFetched: "Employees list fetched successfully",
+        employeeNotFound: "Employee not found. Invalid employee Id",
+        employeeDetailsUpdated: "Employee details updated successfully",
+        deleteEmployee: "Employee deleted successfully",
+        authTokenMissing:"Auth token is missing",
+        invalidAuthToken:"Invalid auth token"
+}
